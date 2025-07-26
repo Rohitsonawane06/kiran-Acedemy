@@ -1,0 +1,95 @@
+9<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+    <header>
+    <div class="container mt-4">
+         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Get Marksheet</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home'%}">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'adduser'%}">Add User</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'cal' %}">Get Calculater</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'marksheet' %}">Get Marksheet</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</div>
+<br>
+</header>
+<br>
+    <div style="width: 500px; border: 3px solid blue; padding: 10px; margin: auto;">
+        <form action="{% url 'marksheet' %}" method="POST">
+            {% csrf_token %}
+            <h3 class="text-primary text-center">Student Marksheet</h3>
+            <table cellpadding="20">
+
+                <tr>
+                    <td>Enter Student Name :- </td>
+                    <td><input type="text" name="sname" value="{{sname}}"></td>
+                </tr>
+                <br>
+
+                <tr>
+                    <td>Enter M1 Marks :- </td>
+                    <td><input type="number" name="m1" value="{{m1}}"></td>
+                </tr>
+
+                <tr>
+                    <td>Enter M2 Marks :- </td>
+                    <td><input type="number" name="m2" value="{{m2}}"></td>
+                </tr>
+
+                <tr>
+                    <td>Enter M3 Marks :- </td>
+                    <td><input type="number" name="m3" value="{{m3}}"></td>
+                </tr>
+
+                <br>
+
+
+
+                <tr>
+                    <td>Total :-</td>
+                    <td><input type="text" value="{{total}}"></td>
+                </tr>
+
+                <tr>
+                    <td>Percentage :-</td>
+                    <td><input type="text" value="{{percentage}}"></td>
+                </tr>
+                
+                <tr>
+                    <td>Grade :-</td>
+                    <td><input type="text" value="{{grade}}"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Show Result"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

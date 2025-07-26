@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %} Home Page {% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+  <div class="row">
+    {% for i in info %}
+    <div class="col-lg-4 mb-4 d-flex">
+      <div class="card w-100 h-100 shadow-sm">
+        <img src="{{ i.productimages.url }}" class="card-img-top" alt="{{ i.pname }}" style="height: 200px; object-fit: cover;">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title text-truncate">{{ i.pname }}</h5>
+          
+          <!-- Inline Details -->
+          <div class="d-flex justify-content-between text-muted" style="font-size: 0.9rem;">
+            <span>₹{{ i.price }}</span>
+            <span>{{ i.offer }}% OFF</span>
+          </div>
+
+          <p class="card-text text-truncate mt-2" title="{{ i.description }}">{{ i.description }}</p>
+
+          <a href="#" class="btn btn-primary mt-auto ">Add to Card</a><br>
+          <a href="{% url 'edit' i.id %}" class="btn btn-primary mt-auto">Edit</a><br>
+          <a href="{% url 'delete' i.id %}" class="btn btn-primary mt-auto" onclick="return confirm('Are you sure You Delete this Product..?')">Delete</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
+

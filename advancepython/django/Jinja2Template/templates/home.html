@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="m-auto">
+    <h2 style="text-align: center;">This the home pages</h2>
+        <p>Name:-{{Data1}}</p>
+        <p>Age :-{{data}}</p>
+        <p>"Marks:-{{data2}}</p>
+        <p>Courses:-{{data3}}</p>
+        <ul>
+
+            {% for i in data3 %}
+            <li>{{i}}</li>
+            {% endfor %}
+
+        </ul>
+        {% if status %}
+        <p>Welcome ,Student</p>
+        {% else %}
+        <p>Hello studnt</p>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/external.css' %}">
+</head>
+<body>
+    <h2 id="hed">Django tutorial</h2>
+    <br>
+    <a href="{% url 'about' %}">About page</a>
+    <p id="p1">Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of ...</p>
+    <h2 >DJANGO</h2>
+    <p >
+        Django Content
+    </p>
+    <ul class="c1">
+        <li>App</li>
+        <li>Model</li>
+        <li>View</li>
+        <li>ORM</li>
+    </ul>
+
+    <img src="{% static 'images/bird.jpg' %}" alt="images1" height="400px" width="400px" class="c2">
+    <img src="{% static 'images/tiger.jpg' %}" alt="images2" height="400px" width="400px" class="c2">
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/YPdWawtfvgA?si=iEPLo9vMWomEkL8K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>

@@ -1,0 +1,81 @@
+use db_1248;
+
+create table employee( id int primary key, name varchar(20),salary int,department varchar(20),location varchar(20),datea date );
+
+insert into employee values(8,'pooja',38000,'dev','nashik','2023-06-1');
+
+select * from employee;
+#1. What are the names of all employees?
+select name from employee;
+
+#2. How many employees are there in total?
+select count(*) from employee;
+
+#3. What departments do the employees work in?
+select name,department from employee;
+
+#4. How many employees work in each department?
+select department,count(department)from employee group by department; 
+
+# 5.Who is the highest-paid employee?
+select * from employee order by salary  desc limit 1;
+
+#6. Who is the lowest-paid employee?
+select * from employee order by salary limit 1;
+
+#7. How many employees earn more than ₹20,000 per year?
+select * from employee where salary>20000;
+
+#8. What is the average salary of all employees?
+select avg(salary)from employee;
+
+#9. Who are the top 5 highest-paid employees?
+select name, salary from employee order by salary limit 5;
+
+#10. Who are the employees in the Marketing department?
+select * from employee where department="test";
+
+#11. How many employees have a salary between ₹15,000 and ₹25,000?
+select count(*) from employee where salary between 15000 and 20000; 
+
+#12. Who are the employees with a salary of NULL?
+select name,salary from employee where salary="Not null";
+
+# 13.Who are the employees with a first name starting with "J"?
+select *from employee where name like 'j%';
+
+#14 What are the salaries of all employees sorted in descending order?
+select * from employee where salary order by salary desc;
+
+#15 What is the total salary expenditure of the company?
+select sum(salary) from employee;
+
+#16 Who are the employees with the same first names?
+select * from employee where name like '%';
+
+#17 How many employees are there in Pune location?
+select * from employee where location="pune";
+
+#18  What is the average salary of employees in Dev department?
+select avg(salary) from employee where department='dev';
+
+#19 Who are the employees with salaries above the average?
+select * from employee where salary>(select avg(salary)from employee);
+
+#20 Who are the employees with the lowest salary in Test department?
+select * from employee where department='test' and salary=(select min(salary) from employee where department='test');
+
+#21 How many employees were hired in 2023 year?
+select count(*) from employee where year(datea)='2023';
+
+#22 Who are the employees hired in the year 2023?
+select * from employee where year(datea)='2023';
+
+#23 What is the total salary expenditure in Dev and Support department?
+select department,sum(salary)from employee where department in('dev','support') group by department; 
+
+#24 Who are the employees with a salary greater than the average salary of Dev department?
+select * from employee where salary>(select avg(salary)from employee where department='dev');
+
+#W25 hat is the total salary expenditure in Pune location?
+select sum(salary)from employee where location='pune';

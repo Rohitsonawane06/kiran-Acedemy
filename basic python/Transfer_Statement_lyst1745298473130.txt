@@ -1,0 +1,61 @@
+1)what is transfer statement and what are types
+Answer:
+Transfer statements in Python refer to statements that control the flow of execution within loops and conditional structures. They allow you to "transfer" the program's control to a different part of the code, either by skipping sections, breaking out of loops, or ending the execution.
+There are 3 types:
+break
+continue
+pass
+
+2)what is purpose of break Statement?
+Answer:
+The break statement is used to terminate the current loop (either for or while) prematurely. When the break statement is encountered, the program exits the loop and continues with the next line of code after the loop.
+eg.
+l=[11,22,33,44,55]
+for num in l:
+	print(num)
+	if num==33:
+		break
+
+#output
+11
+22
+33
+
+3)what is purpose of continue Statement?
+Answer:
+The continue statement is used to skip the rest of the code inside the current iteration of a loop and proceed to the next iteration. It doesn't terminate the loop, but it does skip the remaining code in that iteration.
+
+eg.
+l=[11,22,33,44,55]
+for num in l:
+	if num==33:
+		continue
+	print(num)
+#output
+11
+22
+44
+55
+
+4)what is purpose of pass Statement?
+Answer:
+The pass statement is a placeholder that does nothing. It is often used when a statement is syntactically required but you don't want to write any code. It's used to avoid errors when a block of code is empty.
+
+for i in range(5):
+	pass
+
+if 4>7:
+	pass
+
+5) What happens if you use a break statement inside a nested loop?
+Answer:
+The break statement will only terminate the innermost loop it is placed in. The outer loop will continue to execute.
+
+6) What will happen if you use a break statement in a loop without any condition?
+Answer:
+You can use a break statement inside a loop without a condition; however, the break will simply terminate the loop immediately when it's executed. 
+
+=========ThankYou=================
+"Just like transfer statements in coding, life is about making the right moves—know when to break through challenges, continue pushing forward, and pass through obstacles with grace!"
+VaibhavPatil
+TheKiranAcademy

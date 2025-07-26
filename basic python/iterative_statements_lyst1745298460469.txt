@@ -1,0 +1,95 @@
+1)what is looping statements in python?what are types
+Answer:
+Looping statements in Python are used to execute a block of code repeatedly as long as a specified condition is met or for a defined number of iterations. They are essential for tasks that require repetition, such as iterating over a collection or performing an operation multiple times.
+there are 2 types
+for loop
+while loop
+while loop
+
+2)what is purpose of for loop?
+Answer:
+The for loop is used to iterate over a sequence (like a list, tuple, string, or range). It executes a block of code once for each item in the sequence.
+syntax:
+for var in sequence:
+	#body of for loop
+
+eg.
+for i in range(1,5,1):
+	print(i)
+
+#output:
+1
+2
+3
+4
+
+3)what is purpose of while loop?
+Answer:
+The while loop is used to executes a block of code as long as the condition is True. If the condition becomes False, the loop stops.
+syntax:
+Initialization 
+while Condition:
+	#block of while loop
+	Update
+
+eg.
+i=1
+while i<=5:
+	print(i)
+	i=i+1
+
+
+4)Can a for loop be used without a sequence or range? If yes, how?
+Answer:
+No, a for loop in Python specifically requires a sequence (like a list, tuple, or string) or an iterable (like a generator or range). Without these, the for loop will raise an error because it cannot iterate over None or an undefined sequence.
+eg.
+for i in None:  # This will raise a TypeError
+    print(i)
+	
+5)What happens if the condition in a while loop is always True?
+Answer:
+If the condition in a while loop is always True, it results in an infinite loop unless there is a break statement inside the loop to terminate it.
+eg.
+while True:
+    print("This will run forever unless stopped!")
+    break  # Terminates the loop
+
+
+6)Can a for loop include an else block? When does it execute?
+Answer:
+Yes, a for loop can include an else block. The else block executes when the loop completes all iterations without encountering a break statement.
+eg.
+for i in range(5):
+    if i == 3:
+        break
+else:
+    print("Loop completed without a break.")  # This will not execute
+
+7)Can you modify the iteration variable in a for loop? Does it affect the loop?
+Answer:
+You can modify the iteration variable inside a for loop, but it does not affect the loop’s behavior. The loop continues to iterate over the sequence as defined initially.
+eg.
+for i in range(5):
+    i = 10  # Modifying the iteration variable
+    print(i)  # Outputs 10 for each iteration
+
+
+8)Can a while loop have no condition? If yes, how?
+Answer:
+A while loop requires a condition. However, if you want to simulate a loop with "no condition," you can use while True as an unconditional infinite loop. You can then control its termination with a break statement.
+
+eg.
+while True:
+	print('hello i am vaibhav patil')
+	ch=input('do you want to continue y/n: ')
+	if ch=='n':
+		break
+
+9) Can you nest a for loop inside a while loop (or vice versa)? How do they interact?
+Answer:
+Yes, you can nest loops of different types. The inner loop completes all its iterations for each iteration of the outer loop.
+
+==================ThankYou===========
+"Every loop you iterate through brings you one step closer to mastering the code—keep looping, keep learning!"
+VaibhavPatil
+TheKiranAcademy

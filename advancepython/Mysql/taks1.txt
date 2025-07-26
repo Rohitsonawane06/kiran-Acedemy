@@ -1,0 +1,10 @@
+1]select name from employee where salary>20000;
+2] select *from employee where salary>15000;
+3]select name,experience from employee where age>35;
+4] select*from employee where profile="dev";
+5]select*from employee where profile="test";
+6]select* from employee where salary>=25000;
+7]select name,email from employee where salary !=50000;
+8]update employee set salary=salary+10000 where experience>20;
+9]delete from employee  where experience=21;
+10] update employee set salary=salary-10000 where name="johan";

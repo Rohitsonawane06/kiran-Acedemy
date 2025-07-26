@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Home Page</title>
+  </head>
+  <body>
+    <header>
+    <div class="container mt-4">
+         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">App Calculater</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'adduser' %}">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'adduser' %}">Add User</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'cal' %}">Get Calculator</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'marksheet' %}">Get Marksheet</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</div>
+<br>
+</header>
+<br>
+<div class="text-center">
+   <h3 class=" text-center text-sucess">Add user Info</h3>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Registration Form</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow-lg rounded-4">
+          <div class="card-header bg-primary text-white text-center">
+            <h3 class="mb-0">User Registration</h3>
+          </div>
+          <div class="card-body p-4">
+            <form action="{% url 'adduser' %}" method="post">
+                {% csrf_token %} 
+              <div class="mb-3">
+                <label for="userid" class="form-label">User ID</label>
+                <input type="text" class="form-control" name="uid" id="userid" placeholder="Enter User ID">
+              </div>
+
+              <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" name="unam" id="username" placeholder="Enter Username">
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control"  name="email" placeholder="Enter Email">
+              </div>
+
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control"name="password" id="password" placeholder="Enter Password">
+              </div>
+
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Register</button>
+              </div>
+            </form>
+          </div>
+          <div class="card-footer text-center">
+            <small>Already have an account? <a href="#">Login here</a></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+</div>
+<div class=" container text-center text-danger">
+    <p>User ID :{{uid}}</p>
+    <p>Name :{{uname}}</p>
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

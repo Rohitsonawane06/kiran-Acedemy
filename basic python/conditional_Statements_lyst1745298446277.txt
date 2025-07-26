@@ -1,0 +1,109 @@
+1)what is flow control statement in python?and what are types?
+Answer:
+Flow control statements in Python are used to control the execution flow of a program based on conditions or loops. They determine the sequence in which the program's code is executed.
+There are 3 types
+Conditional Statements:
+Looping Statements/iterative statements:
+Transfer statements:
+
+2)What is the purpose of conditional statements in Python?
+Answer:
+Conditional statements in Python are used to execute a block of code only if a specified condition is True. They enable decision-making in a program based on conditions.
+
+3)What is the syntax of an if statement in Python?
+Answer:
+The syntax of an if statement is:
+if condition:
+    # Code to execute if condition is True
+	
+4)Can you use an else statement without an if statement in Python?
+Answer:
+No, an else statement must always be paired with an if statement.
+
+5)What is the difference between if and if-else statements?
+Answer:
+if =>executes a block of code if the condition is True. If the condition is False, no code is executed.
+if-else=> executes one block of code if the condition is True and another block if the condition is False.
+
+6)Can Python's if statements check multiple conditions?
+Answer:
+Yes, multiple conditions can be checked using logical operators like and, or, and not. For example:
+if condition1 and condition2:
+    # Code to execute
+	
+7)How does Python handle nested if statements?
+Answer:
+Nested if statements are if statements inside another if block. Python executes the inner if block only if the outer condition is True. 
+eg.
+n1=int(input('enter num: '))
+if num>10:
+	if num>12:
+		print('hello')
+#output:
+enter num:9
+
+8)What is the elif keyword, and how does it differ from multiple if statements?
+Answer:
+The elif keyword is used for multiple conditions in a sequence. Only one block is executed when a condition evaluates to True.
+Multiple if statements are independent, and each one is evaluated regardless of the others.
+
+9)What happens if you omit the colon (:) in a conditional statement?
+Answer:
+Python will throw a SyntaxError because the colon is required to define the start of the conditional block.
+
+10)Explain how conditional statements work with boolean values.
+Answer:
+In Python, conditional statements evaluate expressions to boolean values (True or False). Based on the result:
+
+If the condition evaluates to True, the corresponding block of code is executed.
+If False, the block is skipped or the else block (if present) is executed.
+
+11)Can you use a single-line conditional statement in Python? If yes, how?
+Answer:
+Yes, Python allows single-line conditional statements using the ternary operator. The syntax is:
+value_if_true if condition else value_if_false
+eg.
+num=10
+print('greater' if num>5 else 'less')
+#output:
+greater
+
+12)What is the difference between if-elif and multiple if statements?
+Answer:
+In an if-elif structure, only the first condition that evaluates to True is executed, and the rest are ignored.
+In multiple if statements, all the conditions are evaluated, and multiple blocks can execute if their conditions are True.
+
+eg.for if elif
+num=10
+if num>5:
+	print('hello')
+elif num>7:
+	print('welcome')
+#output:
+hello
+
+eg. for if statemets
+num=10
+if num>5:
+	print('hello')
+if num>7:
+	print('welcome')
+#output:
+hello
+welcome
+
+13)What are the limitations of Python's conditional statements?
+Answer:
+They can become complex and hard to read with deeply nested conditions.
+Python does not support a direct switch-case statement (like in some other languages), so multiple if-elif conditions must be used as a substitute.
+Conditions must evaluate to a boolean value; otherwise, an error may occur.
+
+14)Can you have an if statement without an else block? Why?
+Answer:
+Yes, you can have an if statement without an else block. The else block is optional because it is only used to specify actions when the condition evaluates to False.
+
+================ThankYou==============
+"coding with conditional statements teaches us to make the right decisions based on the circumstances—if you try, you'll succeed, else you'll learn"
+VaibhavPatil
+KiranAcademy
+	
